@@ -228,6 +228,15 @@ button:active {
 .instagram-link i {
     font-size: 1.2rem;
 }
+.dribble-link{
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
 
 .dribble-link i {
     font-size: 1.2rem;
