@@ -7,47 +7,53 @@ body {
     background-color: #fff;
     color: #000
 }
-
 header {
-    background-color: #000;
-    padding: 1rem 0;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #000000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
-header h1 {
-    margin: 0;
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #333;
+}
+.site-title {
     font-size: 2rem;
-    color:white; }
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
 nav ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-}
-
-nav ul li {
+    gap: 20px;
+    padding: 0;
     margin: 0;
 }
 
 nav ul li a {
-    color: #fff;
     text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
     font-weight: bold;
-    padding: 0.5rem 1rem;
-    transition: color 0.3s ease, background 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #ffa500;
-    background: #444;
-    border-radius: 5px;
+    color: #ffffff; /* Highlighted color */
 }
 
 main {
@@ -212,10 +218,13 @@ button:active {
 .instagram-link i {
     font-size: 1.2rem;
 }
+.dribble-link i {
+    font-size: 1.2rem;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: row; /* Ensure items stay in a row */
-        gap: 1rem; /* Reduce gap for smaller screens */
+        flex-direction: row;
+        gap: 1rem;
     }
 }

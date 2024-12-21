@@ -28,6 +28,26 @@ const designPosts = [
         title: "ROBOTIC ARM BUILDING",
         content: "Hands-on workshop on Robotic Arm Building.",
         image: "./my images/rab.png"
+    },
+    {
+        title: "LEADERSHIP",
+        content: "IEEE WIE Day with a special online talk session Leadership Luminaries hosted by IEEE WIE AG RIT!",
+        image: "./my images/leadership.jpg"
+    },
+    {
+        title: "ROS",
+        content: "Building a Differential Drive Robot using ROS",
+        image: "./my images/ros.jpg"
+    },
+    {
+        title: "COMPUTER VISION",
+        content: "OpenCV (Open Source Computer Vision Library) is a powerful open-source library in Python for image and video processing, machine learning, and computer vision tasks",
+        image: "./my images/cv.jpg"
+    },
+    {
+        title: "AWARD",
+        content: "EEE SPS SBC RIT has been awarded $250 under the 2023 Student Branch Chapter Growth Reward Program.✨,A work done in Figma",
+        image: "./my images/sps.jpg"
     }
 ];
 
