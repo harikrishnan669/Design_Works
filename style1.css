@@ -177,7 +177,7 @@ form button:hover {
 button {
     background: #333;
     color: #fff;
-    padding: 0.2rem 0.6rem;
+    padding: 10px 7px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
