@@ -2,7 +2,7 @@ const designPosts = [
     {
         title: "ARDUIQUIZ",
         content: "Arduino exploration with their captivating ArduiQuiz via Instagram polls.",
-        image:'./my images/arduiquiz.jpg'
+        image: './my images/arduiquiz.jpg'
     },
     {
         title: "WOMENS DAY",
@@ -11,31 +11,28 @@ const designPosts = [
     },
     {
         title: "BLOG",
-        content: " Exciting opportunity for bloggers. Let your creativity shine as you envision the possibilities, challenges, and ethical considerations of a future where robots replace humans in the workforce.",
+        content: "Exciting opportunity for bloggers. Let your creativity shine as you envision the possibilities, challenges, and ethical considerations of a future where robots replace humans in the workforce.",
         image: './my images/blog.jpg'
     },
     {
         title: "PHOTOSHOP",
-        content: "Tour of Design Tools🎨🖌️, starting with its debut episode focusing on Adobe Photoshop",
+        content: "Tour of Design Tools🎨🖌️, starting with its debut episode focusing on Adobe Photoshop.",
         image: "./my images/photoshop.jpg"
     },
     {
         title: "GITHUB",
-        content:"GitHub is an essential tool in every budding programmer’s toolkit.",
-        image:"./my images/github.jpg"
+        content: "GitHub is an essential tool in every budding programmer’s toolkit.",
+        image: "./my images/github.jpg"
     },
     {
         title: "ROBOTIC ARM BUILDING",
-        content:"Hands on workshop on Robotic Arm Bulding",
-        image:"./my images/rab.png"
+        content: "Hands-on workshop on Robotic Arm Building.",
+        image: "./my images/rab.png"
     }
-
-
 ];
 
 let currentPostIndex = 0;
 const postsPerLoad = 3;
-
 
 function loadPosts() {
     const designContainer = document.getElementById("design-container");
@@ -47,10 +44,11 @@ function loadPosts() {
         postDiv.innerHTML = `
             <h3>${post.title}</h3>
             <img src="${post.image}" alt="${post.title}" class="post-image">
-            <p class="post-content">${post.content.slice(0, 100)}...</p>
-            <button class="read-more-btn">Read More</button>
-            <p class="full-content" style="display: none;">${post.content}</p>
-            <button class="read-less-btn" style="display: none;">Read Less</button>
+            <div class="content-wrapper">
+                <p class="post-content">${post.content.slice(0, 100)}...</p>
+                <p class="full-content" style="display: none;">${post.content}</p>
+            </div>
+            <button class="toggle-content-btn">Read More</button>
         `;
 
         designContainer.appendChild(postDiv);
@@ -64,7 +62,6 @@ function loadPosts() {
         currentPostIndex > postsPerLoad ? "block" : "none";
 }
 
-
 function loadLessPosts() {
     const designContainer = document.getElementById("design-container");
     designContainer.innerHTML = "";
@@ -75,32 +72,27 @@ function loadLessPosts() {
     document.getElementById("load-less").style.display = "none";
 }
 
-// Event listeners for buttons
+// Event listeners for Load More / Load Less buttons
 document.getElementById("load-more").addEventListener("click", loadPosts);
 document.getElementById("load-less").addEventListener("click", loadLessPosts);
 
-// Event delegation for Read More / Read Less buttons
+// Event delegation for toggle content buttons
 document.getElementById("design-container").addEventListener("click", (event) => {
-    if (event.target.classList.contains("read-more-btn")) {
-        const postContent = event.target.previousElementSibling;
-        const fullContent = event.target.nextElementSibling;
-        const readLessBtn = fullContent.nextElementSibling;
+    if (event.target.classList.contains("toggle-content-btn")) {
+        const postContent = event.target.previousElementSibling.querySelector(".post-content");
+        const fullContent = event.target.previousElementSibling.querySelector(".full-content");
 
-        postContent.style.display = "none";
-        fullContent.style.display = "block";
-        event.target.style.display = "none";
-        readLessBtn.style.display = "inline-block";
-    }
-
-    if (event.target.classList.contains("read-less-btn")) {
-        const fullContent = event.target.previousElementSibling;
-        const postContent = fullContent.previousElementSibling;
-        const readMoreBtn = postContent.nextElementSibling;
-
-        fullContent.style.display = "none";
-        postContent.style.display = "block";
-        readMoreBtn.style.display = "inline-block";
-        event.target.style.display = "none";
+        if (fullContent.style.display === "none") {
+            // Show full content
+            fullContent.style.display = "block";
+            postContent.style.display = "none";
+            event.target.textContent = "Read Less";
+        } else {
+            // Hide full content
+            fullContent.style.display = "none";
+            postContent.style.display = "block";
+            event.target.textContent = "Read More";
+        }
     }
 });
 
