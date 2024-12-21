@@ -1,12 +1,12 @@
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
     background-color: #fff;
-    color: #000
+    color: #000;
 }
+
 header {
     display: flex;
     justify-content: space-between;
@@ -14,12 +14,17 @@ header {
     padding: 15px 20px;
     background-color: #000000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
 }
+
 .logo-container {
     display: flex;
     align-items: center;
     gap: 10px;
 }
+
 .logo {
     height: 60px;
     width: 60px;
@@ -27,6 +32,7 @@ header {
     object-fit: cover;
     border: 2px solid #333;
 }
+
 .site-title {
     font-size: 2rem;
     font-family: 'Arial', sans-serif;
@@ -36,12 +42,14 @@ header {
     text-transform: uppercase;
     letter-spacing: 1.5px;
 }
+
 nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 
 nav ul li a {
@@ -53,7 +61,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ffffff; /* Highlighted color */
+    color: #ffffff;
 }
 
 main {
@@ -83,9 +91,11 @@ section {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .content-wrapper {
     min-height: 100px;
 }
+
 .design-post:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -117,6 +127,7 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+    box-sizing: border-box;
 }
 
 footer p {
@@ -124,7 +135,6 @@ footer p {
     font-size: 0.9rem;
 }
 
-/* Form Styles */
 form {
     max-width: 400px;
     margin: 0 auto;
@@ -164,7 +174,6 @@ form button:hover {
     background: #555;
 }
 
-/* Buttons */
 button {
     background: #333;
     color: #fff;
@@ -186,6 +195,7 @@ button:hover {
 button:active {
     transform: scale(0.95);
 }
+
 .about-me-container {
     display: flex;
     align-items: center;
@@ -218,13 +228,54 @@ button:active {
 .instagram-link i {
     font-size: 1.2rem;
 }
+
 .dribble-link i {
     font-size: 1.2rem;
 }
-/* Responsive Design */
+
 @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .logo-container {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .site-title {
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        height: 50px;
+        width: 50px;
+    }
+
     nav ul {
         flex-direction: row;
+        gap: 10px;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        text-align: left;
+    }
+
+    footer {
+        padding: 1rem 10px;
+    }
+
+    .about-me-container {
+        flex-direction: column;
         gap: 1rem;
+    }
+
+    .about-photo img {
+        width: 120px;
+        height: 120px;
+    }
+    .about-text {
+        flex: 1;
     }
 }
