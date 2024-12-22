@@ -53,7 +53,7 @@
 
     <section id="contact">
         <h2>Contact Me</h2>
-        <form id="contact-form">
+        <form action="" method="post" onsubmit="sendMail(event)">
             <label for="name">Name:</label>
             <input type="text" id="name" required>
 
@@ -63,7 +63,7 @@
             <label for="message">Message:</label>
             <textarea id="message" rows="5" required></textarea>
 
-            <button type="submit">Send</button>
+            <button type="submit" class="btn">Send</button>
         </form>
     </section>
 </main>
@@ -71,7 +71,36 @@
 <footer>
     <p>Made with &hearts; by Harikrishnan |@hari_2k4</p>
 </footer>
-
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function(){
+        emailjs.init("gLjba3OfLtOewm34v");
+    })();
+    function sendMail(event){
+        event.preventDefault();
+        var params={
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            message: document.getElementById("message").value
+        };
+        const serviceId="service_ccgecas";
+        const templateId="template_qqzvym3";
+        emailjs.send(serviceId,templateId,params)
+            .then(
+                res  => {
+                    document.getElementById("name").value="";
+                    document.getElementById("email").value="";
+                    document.getElementById("message").value="";
+                    console.log(res);
+                    alert("Message sent successfully");
+                }
+            )
+            .catch((err)=>{
+                console.log(err);
+                alert("Failed to send the message.Please try again later");
+            });
+    }
+</script>
 <script src="script1.js"></script>
 </body>
 </html>
