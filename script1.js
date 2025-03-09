@@ -1,5 +1,20 @@
 const designPosts = [
     {
+        title: "E FOOTBALL",
+        content: "Prevent poster for techfuse 2025",
+        image: "./my images/prevent.png",
+    },
+    {
+        title: "CA",
+        content: "Campus Ambassador poster for techfuse 2025",
+        image: "./my images/new.png"
+    },
+    {
+        title: "WE ARE LIVE",
+        content: "Announced the the official website for TechFuse 2025",
+        image: "./my images/website.png"
+    },
+    {
         title: "ARDUIQUIZ",
         content: "Arduino exploration with their captivating ArduiQuiz via Instagram polls.",
         image: './my images/arduiquiz.jpg'
