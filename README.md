@@ -1,10 +1,10 @@
-# Design Vault
+## Design Vault
 
-🎨I am a passionate Graphic Designer. In order to show my works i made a website named Design Vault and i show my works here and also familiar with tools like Adobe photoshop, Figma and Canva.
+🎨I am a passionate graphic designer and the creator of "Design Vault," a website where I showcase my work. I am proficient in Adobe Photoshop, Figma, and Canva.
 
 <br>If anyone need to check my works providing the website and also can contact me for works.
 
-### Design Vault: https://design-works-r961fc5wt-r-harikrishnans-projects.vercel.app/
+### Design Vault: https://design-vault-hari2k4.vercel.app/
 | Desktop | Mobile |
 |--|--|
 | ![Screenshot 2024-12-22 192849](https://github.com/user-attachments/assets/ebb43750-47ce-4bba-95e2-afdcb854f7fc)|![WhatsApp Image 2024-12-23 at 10 06 11_a78ec13f](https://github.com/user-attachments/assets/aa3a64bd-759d-4fe2-b63f-1b86dc5fbf7a)|
