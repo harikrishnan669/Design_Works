@@ -1,4 +1,4 @@
-## Design Vault
+## <img src="https://github.com/user-attachments/assets/a325de80-4158-4d4f-925c-59231e58ef8c" width="80" height="80" alt="Design Vault"> Design Vault
 
 🎨I am a passionate graphic designer and the creator of "Design Vault," a website where I showcase my work. I am proficient in Adobe Photoshop, Figma, and Canva.
 
