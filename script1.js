@@ -1,4 +1,7 @@
 const designPosts = [
+    { image: "./my images/camp.png" },
+    { image: "./my images/ras.png" },
+    { image: "./my images/wie.png" },
     { image: "./my images/prevent.png" },
     { image: "./my images/new.png" },
     { image: "./my images/website.png" },
@@ -15,7 +18,7 @@ const designPosts = [
 ];
 
 let currentPostIndex = 0;
-const postsPerLoad = 3;
+const postsPerLoad = 4;
 
 function loadPosts() {
     const designContainer = document.getElementById("design-container");
@@ -34,7 +37,7 @@ function loadPosts() {
 
     currentPostIndex += postsPerLoad;
 
-    // Toggle button visibility
+
     document.getElementById("load-more").style.display =
         currentPostIndex < designPosts.length ? "block" : "none";
     document.getElementById("load-less").style.display =
