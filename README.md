@@ -16,8 +16,5 @@
 <br>If anyone need to check my works providing the website and also can contact me for works.
 
 ### Deployed link: [Design Vault](https://design-vault-hari2k4.vercel.app/)
-| Desktop | Mobile |
-|--|--|
-
 
 ### <div align="center"> Drop a ⭐ if you like the repository</div>
