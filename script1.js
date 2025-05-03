@@ -3,6 +3,7 @@ const designPosts = [
     { image: "./my images/ras.png" },
     { image: "./my images/wie.png" },
     { image: "./my images/prevent.png" },
+    { image: "./my images/pd.png" },
     { image: "./my images/new.png" },
     { image: "./my images/website.png" },
     { image: "./my images/arduiquiz.jpg" },
