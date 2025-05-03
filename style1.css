@@ -188,20 +188,49 @@ button:active {
 .about-text p {
     margin: 0.5rem 0;
 }
-
-.instagram-link,
-.dribble-link {
-    color: #00bfff;
-    text-decoration: none;
-    display: inline-flex;
+#SocailIcons {
+    display: flex;
+    justify-content: space-around;
     align-items: center;
-    gap: 0.5rem;
-    transition: color 0.3s ease;
+    gap: 20px;
+    margin-top: 20px;
 }
 
-.instagram-link:hover,
-.dribble-link:hover {
-    color: #007aa3;
+.icons {
+    text-align: center;
+}
+
+.icon {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.icon svg {
+    width: 40px; /* Adjust the size of the icons */
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover svg {
+    transform: scale(1.2);
+}
+
+.iconName {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #ffffff;
+}
+
+.instaIcon .icon {
+    color: #E1306C;
+}
+
+.linkedin .icon {
+    color: #0077B5;
+}
+
+.github .icon {
+    color: #ffffff;
 }
 .lightbox {
     display: none;
@@ -220,7 +249,6 @@ button:active {
     max-width: 90%;
     max-height: 90%;
     border-radius: 10px;
-    box-shadow: 0 0 20px #00bfff;
 }
 @media (max-width: 768px) {
     header {
